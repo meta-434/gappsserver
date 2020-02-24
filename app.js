@@ -50,8 +50,9 @@ app.get('/apps', (req, res) => {
             .status(200)
             .json(results);
     };
+    res
+        .status(200)
+        .json(gapps);
 });
 
-app.listen(8000, () => {
-    console.log('Server started on PORT 8000');
-});
+module.exports = app;
